@@ -1,0 +1,17 @@
+{
+  "name": "task-manager-pro",
+  "version": "1.0.0",
+  "description": "Full-Stack MERN Task Manager Application",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "install-all": "npm install && cd server && npm install && cd ../client && npm install"
+  },
+  "dependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": ["mern", "task-manager", "fullstack"],
+  "license": "MIT"
+}
