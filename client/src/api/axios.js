@@ -1,13 +1,12 @@
 import axios from 'axios';
 
 const API = axios.create({
-  baseURL: '/api',
+  baseURL: 'https://task-manager-pro-vru2.onrender.com/api',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-// Request interceptor - attach JWT token
 API.interceptors.request.use(
   (config) => {
     const token = localStorage.getItem('token');
@@ -19,14 +18,16 @@ API.interceptors.request.use(
   (error) => Promise.reject(error)
 );
 
-// Response interceptor - handle 401
 API.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response?.status === 401) {
       localStorage.removeItem('token');
       localStorage.removeItem('user');
-      if (window.location.pathname !== '/login' && window.location.pathname !== '/register') {
+      if (
+        window.location.pathname !== '/login' &&
+        window.location.pathname !== '/register'
+      ) {
         window.location.href = '/login';
       }
     }
