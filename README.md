@@ -6,6 +6,9 @@ The design utilizes a premium, professional color palette: **Olive Green (#5C6B3
 
 ---
 
+github link --https:/https://github.com/Lakshmikanthmanibolu/Task-manager-pro
+live host link-- https://magenta-taiyaki-2a861f.netlify.app/
+
 ## ✨ Features
 
 - **🔐 Secure Authentication & Authorization**: Sign up and login with JWT (JSON Web Tokens) stored securely. All task operations are strictly authorized and scoped to the logged-in user.
